@@ -1,0 +1,17 @@
+services:
+  website:
+    container_name: portfolio-website-dev
+    build:
+      context: .
+      dockerfile: ./docker/dev/Dockerfile
+    working_dir: /usr/src/app
+    volumes:
+      - ./:/usr/src/app
+      - portfolio-website-node_modules:/usr/src/app/node_modules
+    ports:
+      - "${WEBSITE_DEV_PORT:-5173}:5173"
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+volumes:
+  portfolio-website-node_modules:
