@@ -1,0 +1,52 @@
+:root {
+  --color-white: #ffffff;
+  --color-purple: #909fcd;
+  --color-light-blue: #cdd8e5;
+  --color-dark-blue: #223e5c;
+  --color-black: #0e0d0d;
+  --indent-s: 10px;
+  --indent-m: 30px;
+  --indent-l: 40px;
+  --indent-xl: 70px;
+}
+
+.roboto {
+  font-family: 'Roboto', monospace;
+}
+
+* {
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  text-align: left;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.text-color-purple {
+  color: var(--color-purple);
+}
+
+.text-color-dark-blue {
+  color: var(--color-dark-blue);
+}
+
+.text-color-dark-blue {
+  color: var(--color-dark-blue);
+}
+
+.text-block__s {
+  font-size: 24px;
+}
+
+.text-block__m {
+  font-size: 36px;
+}
+
+.text-block__l {
+  font-size: 48px;
+}
+
+.text-block__xl {
+  font-size: 64px;
+}

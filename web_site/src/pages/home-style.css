@@ -1,0 +1,271 @@
+.HomePage {
+  width: 100%;
+}
+
+.information-about-me {
+  padding: 170px 140px 0px 140px;
+
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, auto);
+
+  background-image: url('../../src/assets/images/background_1.png');
+  background-repeat: no-repeat; /* не повторять */
+  background-position: center; /* по центру */
+  background-size: cover; /* заполнить блок */
+  background-color: var(--color-black); /* цвет если картинка не загрузится */
+}
+
+.text-cell {
+  align-items: flex-start; /* по левому краю */
+  justify-content: flex-start; /* по верху */
+}
+
+.img-cell {
+  max-width: 100%; /* не больше ячейки */
+  max-height: 100%; /* не выше ячейки */
+  width: 100%; /* ширина ячейки */
+  height: auto; /* высота ячейки */
+}
+
+.img-cell img {
+  display: block;
+  max-width: 100%; /* не больше ячейки */
+  max-height: 100%; /* не выше ячейки */
+  height: auto; /* высота ячейки */
+  width: 100%; /* ширина ячейки */
+  object-fit: fill; /* вписывает целиком, без растяжения/обрезки */
+}
+
+.text-cell:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding-bottom: 350px;
+  padding-left: var(--indent-m);
+}
+
+.text-cell:nth-child(2) {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row: 1 / span 2;
+  padding-right: var(--indent-m);
+}
+
+.text-cell:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding-bottom: 140px;
+  padding-left: var(--indent-m);
+}
+
+.text-cell:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding-bottom: 70px;
+  padding-left: var(--indent-m);
+}
+
+.text-cell:nth-child(5) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-bottom: 70px;
+  padding-left: var(--indent-m);
+}
+
+.text-cell:nth-child(6) {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  padding-bottom: 70px;
+  padding-left: var(--indent-m);
+}
+
+.text-cell:nth-child(7) {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  text-align: end;
+  padding-bottom: 70px;
+  padding-left: var(--indent-m);
+}
+
+.education-wrapper {
+  padding: 0px 140px;
+
+  width: 100%;
+  display: grid;
+  gap: var(--indent-xl);
+}
+
+.education-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 равные колонки */
+  gap: var(--indent-m);
+}
+
+.education-steps-card {
+  background-color: var(--color-light-blue);
+  padding: var(--indent-m);
+  gap: var(--indent-xl);
+  align-items: flex-start; /* по левому краю */
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: auto auto auto auto; /* 4 строки */
+  grid-template-columns: 1fr; /* 1 колонка */
+  width: 100%;
+}
+
+.education-steps-card > :nth-last-child(2) {
+  margin-bottom: -30px; /* предпоследний элемент */
+}
+
+.education-steps-card:nth-child(3) {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+}
+
+.skills-wrapper {
+  padding: var(--indent-xl) 140px var(--indent-xl) 140px;
+  width: 100%;
+  display: grid;
+  gap: var(--indent-xl);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+
+  background-image: url('../../src/assets/images/background_2.png');
+  background-repeat: no-repeat; /* не повторять */
+  background-position: center; /* по центру */
+  background-size: cover; /* заполнить блок */
+  background-color: var(--color-black); /* цвет если картинка не загрузится */
+}
+
+.skills-title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.skills-list {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  display: grid;
+  gap: var(--indent-s);
+}
+
+.skills-list_text-decorate {
+  padding-left: var(--indent-m);
+  position: relative; /* для позиционирования ::after */
+  padding-bottom: 15px; /* отступ текста от линии */
+  display: inline-block; /* ширина под текст */
+}
+
+.skills-list_text-decorate::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* у самого низа */
+  left: 30px; /* 30px до левого края */
+  right: 0; /* до правого края */
+  height: 2px; /* толщина 2px */
+  background: var(--color-white); /* цвет линии */
+}
+
+.skills-list > :nth-child(6) {
+  border-bottom: none;
+  padding-left: 0px; /* предпоследний элемент */
+}
+
+.culture-of-work {
+  padding: 0px 140px;
+
+  width: 100%;
+  display: grid;
+  gap: var(--indent-m);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.part1_of_culture {
+  background-color: #e97721;
+  width: 100%;
+  display: grid;
+  gap: var(--indent-m);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.part1_of_culture:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row: span 1;
+}
+
+.part1_of_culture:nth-child(2) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: span 4;
+}
+
+.part1_of_culture:nth-child(3) {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row: span 2;
+}
+
+.part1_of_culture:nth-child(4) {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row: span 2;
+}
+
+.part2_of_culture {
+  background-color: #e97721;
+  width: 100%;
+  display: grid;
+  gap: var(--indent-m);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.part2_of_culture:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: span 2;
+}
+
+.part2_of_culture:nth-child(2) {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row: span 2;
+}
+
+.part2_of_culture:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row: span 3;
+}
+
+.principles-card {
+  background-color: var(--color-light-blue);
+  color: var(--color-dark-blue);
+  border-radius: 20px;
+  padding: var(--indent-m);
+  align-items: flex-start; /* по левому краю */
+  justify-content: flex-start; /* по верху */
+}
+
+.footer {
+  padding: var(--indent-xl) 140px var(--indent-xl) 140px;
+  width: 100%;
+  display: grid;
+  gap: var(--indent-xl);
+  grid-template-rows: 1fr auto;
+
+  background-color: var(--color-black);
+}
+
+.results-list {
+  width: 100%;
+  display: grid;
+  gap: var(--indent-m);
+  grid-template-columns: repeat(3, 1fr);
+}

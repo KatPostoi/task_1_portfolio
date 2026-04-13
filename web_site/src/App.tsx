@@ -1,12 +1,17 @@
-import { Layout } from './components/layout/Layout';
 import { HomePage } from './pages/HomePage';
 
 const App = () => {
-  return (
-    <Layout>
-      <HomePage />
-    </Layout>
-  );
+  const path = (typeof window !== 'undefined' && window.location.pathname) || '';
+  switch (path) {
+    case '':
+    case '/':
+    case '/home': {
+      return <HomePage />;
+    }
+
+    default:
+      return <div>DEFAULT</div>;
+  }
 };
 
 export default App;
