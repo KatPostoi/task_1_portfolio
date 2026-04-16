@@ -1,0 +1,16 @@
+.footer {
+  padding: var(--indent-xl) 140px var(--indent-xl) 140px;
+  width: 100%;
+  display: grid;
+  gap: var(--indent-xl);
+  grid-template-rows: 1fr auto;
+
+  background-color: var(--color-black);
+}
+
+.results-list {
+  width: 100%;
+  display: grid;
+  gap: var(--indent-m);
+  grid-template-columns: repeat(3, 1fr);
+}

@@ -1,0 +1,117 @@
+.HomePage {
+  width: 100%;
+}
+
+.information-about-me {
+  padding: 170px 140px 0px 140px;
+
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, auto);
+
+  background-image: url('../../src/assets/images/background_1.png');
+  background-repeat: no-repeat; /* не повторять */
+  background-position: center; /* по центру */
+  background-size: cover; /* заполнить блок */
+  background-color: var(--color-black); /* цвет если картинка не загрузится */
+}
+
+.text-cell {
+  align-items: flex-start; /* по левому краю */
+  justify-content: flex-start; /* по верху */
+}
+
+.img-cell {
+  max-width: 100%; /* не больше ячейки */
+  max-height: 100%; /* не выше ячейки */
+  width: 100%; /* ширина ячейки */
+  height: auto; /* высота ячейки */
+  padding: 0;
+  border: none;
+  background: none;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: zoom-in;
+  line-height: 0;
+}
+
+.img-cell img {
+  display: block;
+  max-width: 100%; /* не больше ячейки */
+  max-height: 100%; /* не выше ячейки */
+  height: auto; /* высота ячейки */
+  width: 100%; /* ширина ячейки */
+  object-fit: fill; /* вписывает целиком, без растяжения/обрезки */
+  transition: transform 200ms ease;
+}
+
+.img-cell:hover img,
+.img-cell:focus-visible img {
+  transform: scale(1.02);
+}
+
+.img-cell:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 6px;
+}
+
+.text-cell:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding-bottom: 350px;
+  padding-left: var(--indent-m);
+}
+
+.text-cell:nth-child(2) {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row: 1 / span 2;
+  padding-right: var(--indent-m);
+}
+
+.text-cell:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  padding-bottom: 140px;
+  padding-left: var(--indent-m);
+}
+
+.text-cell:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  padding-bottom: 70px;
+  padding-left: var(--indent-m);
+}
+
+.text-cell:nth-child(5) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  padding-bottom: 70px;
+  padding-left: var(--indent-m);
+}
+
+.text-cell:nth-child(6) {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  padding-bottom: 70px;
+  padding-left: var(--indent-m);
+}
+
+.text-cell:nth-child(7) {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  text-align: end;
+  padding-bottom: 70px;
+  padding-left: var(--indent-m);
+}
+
+.bottom {
+  color: var(--color-white);
+  transition: color 300ms ease-out;
+}
+
+.bottom:hover {
+  color: var(--color-purple);
+}

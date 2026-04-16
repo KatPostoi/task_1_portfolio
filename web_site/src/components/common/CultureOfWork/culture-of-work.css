@@ -1,0 +1,87 @@
+.culture-of-work {
+  padding: 0px 140px;
+
+  width: 100%;
+  display: grid;
+  gap: var(--indent-m);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.principles-card {
+  background-color: var(--color-light-blue);
+  color: var(--color-dark-blue);
+  border-radius: 20px;
+  padding: var(--indent-m);
+  align-items: flex-start; /* по левому краю */
+  justify-content: flex-start; /* по верху */
+}
+
+.part1_of_culture {
+  width: 100%;
+  display: grid;
+  gap: var(--indent-m);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.part1_of_culture .principles-card:nth-child(1) {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-dark-blue);
+
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row: span 1;
+}
+
+.part1_of_culture .principles-card:nth-child(2) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: span 4;
+}
+
+.part1_of_culture .principles-card:nth-child(3) {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row: span 2;
+}
+
+.part1_of_culture .principles-card:nth-child(4) {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row: span 2;
+}
+
+.part2_of_culture {
+  width: 100%;
+  display: grid;
+  gap: var(--indent-m);
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.part2_of_culture .principles-card:nth-child(1) {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: span 2;
+}
+
+.part2_of_culture .principles-card:nth-child(2) {
+  grid-column-start: 3;
+  grid-column-end: 6;
+  grid-row: span 2;
+}
+
+.part2_of_culture .principles-card:nth-child(3) {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-dark-blue);
+
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row: span 3;
+}

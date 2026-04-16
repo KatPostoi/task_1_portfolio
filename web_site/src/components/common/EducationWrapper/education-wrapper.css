@@ -1,0 +1,34 @@
+.education-wrapper {
+  padding: 0px 140px;
+
+  width: 100%;
+  display: grid;
+  gap: var(--indent-xl);
+}
+
+.education-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 равные колонки */
+  gap: var(--indent-m);
+}
+
+.education-steps-card {
+  background-color: var(--color-light-blue);
+  padding: var(--indent-m);
+  gap: var(--indent-xl);
+  align-items: flex-start; /* по левому краю */
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: auto auto auto auto; /* 4 строки */
+  grid-template-columns: 1fr; /* 1 колонка */
+  width: 100%;
+}
+
+.education-steps-card > :nth-last-child(2) {
+  margin-bottom: -30px; /* предпоследний элемент */
+}
+
+.education-steps-card:nth-child(3) {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+}

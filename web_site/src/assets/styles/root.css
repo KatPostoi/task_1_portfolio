@@ -31,10 +31,6 @@
   color: var(--color-dark-blue);
 }
 
-.text-color-dark-blue {
-  color: var(--color-dark-blue);
-}
-
 .text-block__s {
   font-size: 24px;
 }

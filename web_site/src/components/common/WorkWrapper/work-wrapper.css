@@ -1,0 +1,14 @@
+.work-wrapper {
+  padding: var(--indent-xl) 140px var(--indent-xl) 140px;
+  margin-bottom: -140px;
+
+  background-image: url('../../src/assets/images/background_3.png');
+  background-color: var(--color-black); /* цвет если картинка не загрузится */
+
+  width: 100vw; /* вся ширина экрана */
+  min-height: 100%;
+  background-repeat: no-repeat; /* не повторять */
+  background-position: left top; /* ЛЕВЫЙ КРАЙ */
+  background-size: auto 100vh; /* ширина auto (оригинал 3850px), высота 100vh */
+  position: relative;
+}
