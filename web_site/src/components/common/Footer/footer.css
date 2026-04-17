@@ -14,3 +14,43 @@
   gap: var(--indent-m);
   grid-template-columns: repeat(3, 1fr);
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    padding: var(--indent-l) 105px var(--indent-l) 105px;
+    gap: var(--indent-l);
+  }
+  .results-list {
+    width: 100%;
+    display: grid;
+    gap: var(--indent-m);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--indent-m) 70px var(--indent-m) 70px;
+    gap: var(--indent-m);
+  }
+  .results-list {
+    width: 100%;
+    display: grid;
+    gap: var(--indent-s);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .footer {
+    padding: var(--indent-s) 35px var(--indent-s) 35px;
+    gap: var(--indent-s);
+  }
+
+  .results-list {
+    width: 100%;
+    display: grid;
+    gap: var(--indent-s);
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

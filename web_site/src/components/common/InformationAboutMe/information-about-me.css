@@ -35,6 +35,9 @@
   -webkit-appearance: none;
   cursor: zoom-in;
   line-height: 0;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 .img-cell img {
@@ -114,4 +117,208 @@
 
 .bottom:hover {
   color: var(--color-purple);
+}
+
+@media (max-width: 1024px) {
+  .information-about-me {
+    padding: 135px 105px 0px 105px;
+
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .img-cell {
+    display: grid;
+    justify-items: end;
+    align-items: start;
+  }
+
+  .text-cell:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-bottom: 250px;
+    padding-left: var(--indent-m);
+  }
+
+  .text-cell:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1 / span 1;
+    padding-right: var(--indent-m);
+  }
+
+  .text-cell:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-bottom: 105px;
+    padding-left: var(--indent-m);
+  }
+
+  .text-cell:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-bottom: 35px;
+    padding-left: var(--indent-m);
+  }
+
+  .text-cell:nth-child(5) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-bottom: 35px;
+    padding-left: var(--indent-m);
+  }
+
+  .text-cell:nth-child(6) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-bottom: 35px;
+    padding-left: var(--indent-m);
+  }
+
+  .text-cell:nth-child(7) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: start;
+    padding-bottom: 35px;
+    padding-left: var(--indent-m);
+  }
+}
+
+@media (max-width: 768px) {
+  .information-about-me {
+    padding: 100px 70px 0px 70px;
+
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .img-cell {
+    display: grid;
+    justify-items: end;
+    align-items: start;
+  }
+
+  .text-cell:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-bottom: 150px;
+    padding-left: var(--indent-s);
+  }
+
+  .text-cell:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1 / span 1;
+    padding-right: var(--indent-s);
+  }
+
+  .text-cell:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-bottom: 70px;
+    padding-left: var(--indent-s);
+  }
+
+  .text-cell:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-bottom: 10px;
+    padding-left: var(--indent-s);
+  }
+
+  .text-cell:nth-child(5) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-bottom: 10px;
+    padding-left: var(--indent-s);
+  }
+
+  .text-cell:nth-child(6) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-bottom: 10px;
+    padding-left: var(--indent-s);
+  }
+
+  .text-cell:nth-child(7) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: start;
+    padding-bottom: 10px;
+    padding-left: var(--indent-s);
+  }
+}
+
+@media (max-width: 360px) {
+  .information-about-me {
+    padding: 70px 35px 0px 35px;
+
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+
+  .img-cell {
+    display: grid;
+    justify-items: end;
+    align-items: start;
+  }
+
+  .text-cell:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-bottom: 50px;
+    padding-left: var(--indent-s);
+  }
+
+  .text-cell:nth-child(2) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1 / span 1;
+    padding-right: var(--indent-s);
+  }
+
+  .text-cell:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    padding-bottom: 35px;
+    padding-left: var(--indent-s);
+  }
+
+  .text-cell:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-bottom: 10px;
+    padding-left: var(--indent-s);
+  }
+
+  .text-cell:nth-child(5) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-bottom: 10px;
+    padding-left: var(--indent-s);
+  }
+
+  .text-cell:nth-child(6) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    padding-bottom: 10px;
+    padding-left: var(--indent-s);
+  }
+
+  .text-cell:nth-child(7) {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: start;
+    padding-bottom: 10px;
+    padding-left: var(--indent-s);
+  }
 }

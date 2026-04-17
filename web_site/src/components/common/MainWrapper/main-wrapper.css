@@ -5,3 +5,15 @@
   background-color: var(--color-white);
   gap: 140px;
 }
+
+@media (max-width: 1024px) {
+  .main-wrapper {
+    gap: 105px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-wrapper {
+    gap: 70px;
+  }
+}

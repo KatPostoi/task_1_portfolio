@@ -46,3 +46,57 @@
 .text-block__xl {
   font-size: 64px;
 }
+
+@media (max-width: 1024px) {
+  .text-block__s {
+    font-size: 24px;
+  }
+
+  .text-block__m {
+    font-size: 28px;
+  }
+
+  .text-block__l {
+    font-size: 42px;
+  }
+
+  .text-block__xl {
+    font-size: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-block__s {
+    font-size: 20px;
+  }
+
+  .text-block__m {
+    font-size: 26px;
+  }
+
+  .text-block__l {
+    font-size: 38px;
+  }
+
+  .text-block__xl {
+    font-size: 52px;
+  }
+}
+
+@media (max-width: 360px) {
+  .text-block__s {
+    font-size: 8px;
+  }
+
+  .text-block__m {
+    font-size: 10px;
+  }
+
+  .text-block__l {
+    font-size: 14px;
+  }
+
+  .text-block__xl {
+    font-size: 20px;
+  }
+}
