@@ -1,0 +1,118 @@
+.scroll-driven-horizontal-section,
+.scroll-driven-horizontal-section :where(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+
+.scroll-driven-horizontal-section {
+  --scroll-driven-track-offset: 0px;
+
+  position: relative;
+  width: 100%;
+  min-height: 100svh;
+}
+
+.scroll-driven-horizontal-section__sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.scroll-driven-horizontal-section__viewport {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: clip;
+}
+
+.scroll-driven-horizontal-section__viewport--with-overlay {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-content: start;
+}
+
+.scroll-driven-horizontal-section__overlay {
+  position: relative;
+  z-index: 1;
+}
+
+.scroll-driven-horizontal-section__track {
+  position: relative;
+  display: block;
+  inline-size: max-content;
+  min-inline-size: 100%;
+  block-size: 100%;
+  min-block-size: 0;
+  transform: translate3d(var(--scroll-driven-track-offset), 0, 0);
+  will-change: transform;
+}
+
+.scroll-driven-horizontal-section__canvas {
+  position: relative;
+  inline-size: max-content;
+  min-inline-size: 100%;
+  block-size: 100%;
+  min-block-size: 100%;
+}
+
+.scroll-driven-horizontal-section--content-height {
+  min-height: 0;
+}
+
+.scroll-driven-horizontal-section--content-height .scroll-driven-horizontal-section__sticky {
+  height: auto;
+}
+
+.scroll-driven-horizontal-section--content-height .scroll-driven-horizontal-section__viewport {
+  height: auto;
+}
+
+.scroll-driven-horizontal-section--content-height .scroll-driven-horizontal-section__viewport--with-overlay {
+  grid-template-rows: auto auto;
+}
+
+.scroll-driven-horizontal-section--content-height .scroll-driven-horizontal-section__track {
+  block-size: auto;
+}
+
+.scroll-driven-horizontal-section--content-height .scroll-driven-horizontal-section__canvas {
+  block-size: auto;
+  min-block-size: 0;
+}
+
+.scroll-driven-horizontal-section--native-scroll {
+  min-height: 0;
+}
+
+.scroll-driven-horizontal-section--native-scroll .scroll-driven-horizontal-section__sticky {
+  position: relative;
+  top: auto;
+  height: auto;
+  overflow: visible;
+}
+
+.scroll-driven-horizontal-section--native-scroll .scroll-driven-horizontal-section__viewport {
+  height: auto;
+  overflow: visible;
+}
+
+.scroll-driven-horizontal-section--native-scroll .scroll-driven-horizontal-section__viewport--with-overlay {
+  grid-template-rows: auto auto;
+}
+
+.scroll-driven-horizontal-section--native-scroll .scroll-driven-horizontal-section__track {
+  inline-size: 100%;
+  min-inline-size: 0;
+  block-size: auto;
+  overflow-x: auto;
+  overflow-y: visible;
+  transform: none;
+  will-change: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-driven-horizontal-section--native-scroll .scroll-driven-horizontal-section__canvas {
+  block-size: auto;
+  min-block-size: 0;
+}

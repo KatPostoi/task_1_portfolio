@@ -1,0 +1,85 @@
+.profile-image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: rgba(14, 13, 13, 0.3);
+  backdrop-filter: blur(14px);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.profile-image-modal--visible {
+  opacity: 1;
+}
+
+.profile-image-modal__dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.94);
+  transition: transform 220ms ease;
+}
+
+.profile-image-modal--visible .profile-image-modal__dialog {
+  transform: scale(1.5);
+}
+
+.profile-image-modal__image-button {
+  width: clamp(320px, 55vw, 640px);
+  max-width: calc(100vw - 48px);
+  max-height: calc(100vh - 48px);
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: zoom-out;
+  appearance: none;
+  -webkit-appearance: none;
+  line-height: 0;
+}
+
+.profile-image-modal__image-button:focus-visible {
+  outline: 2px solid var(--color-white);
+  outline-offset: 6px;
+  border-radius: 999px;
+}
+
+.profile-image-modal__image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  max-height: calc(100vh - 48px);
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .profile-image-modal {
+    padding: 16px;
+  }
+
+  .profile-image-modal__image-button {
+    max-width: calc(100vw - 32px);
+    max-height: calc(100vh - 32px);
+  }
+
+  .profile-image-modal__image {
+    max-height: calc(100vh - 32px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-image-modal,
+  .profile-image-modal__dialog {
+    transition: none;
+  }
+
+  .profile-image-modal__dialog,
+  .profile-image-modal--visible .profile-image-modal__dialog {
+    transform: none;
+  }
+}

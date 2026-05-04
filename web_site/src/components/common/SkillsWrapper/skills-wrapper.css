@@ -1,0 +1,141 @@
+.skills-wrapper {
+  padding: var(--indent-xl) 140px var(--indent-xl) 140px;
+  width: 100%;
+  display: grid;
+  gap: var(--indent-xl);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+
+  background-image: url('../../src/assets/images/background_2.png');
+  background-repeat: no-repeat; /* не повторять */
+  background-position: center; /* по центру */
+  background-size: cover; /* заполнить блок */
+  background-color: var(--color-black); /* цвет если картинка не загрузится */
+}
+
+.skills-title {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.skills-list {
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  display: grid;
+  gap: var(--indent-s);
+}
+
+.skills-list_text-decorate {
+  padding-left: var(--indent-m);
+  position: relative; /* для позиционирования ::after */
+  padding-bottom: 15px; /* отступ текста от линии */
+  display: inline-block; /* ширина под текст */
+}
+
+.skills-list_text-decorate::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* у самого низа */
+  left: 30px; /* 30px до левого края */
+  right: 0; /* до правого края */
+  height: 2px; /* толщина 2px */
+  background: var(--color-white); /* цвет линии */
+}
+
+.skills-list > :nth-child(6) {
+  border-bottom: none;
+  padding-left: 0px; /* предпоследний элемент */
+}
+
+@media (max-width: 1024px) {
+  .skills-wrapper {
+    padding: var(--indent-l) 105px var(--indent-l) 105px;
+    gap: var(--indent-l);
+    grid-template-columns: 1fr;
+  }
+
+  .skills-title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .skills-list {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .skills-list_text-decorate {
+    padding-left: var(--indent-m);
+    padding-bottom: 15px; /* отступ текста от линии */
+  }
+
+  .skills-list_text-decorate::after {
+    left: 30px; /* 30px до левого края */
+    height: 2px; /* толщина 2px */
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-wrapper {
+    padding: var(--indent-m) 70px var(--indent-m) 70px;
+    gap: var(--indent-m);
+    grid-template-columns: 1fr;
+  }
+
+  .skills-title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .skills-list {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .skills-list_text-decorate {
+    padding-left: var(--indent-s);
+    padding-bottom: 7px; /* отступ текста от линии */
+  }
+
+  .skills-list_text-decorate::after {
+    left: 0px; /* 30px до левого края */
+    height: 1px; /* толщина 2px */
+  }
+}
+
+@media (max-width: 360px) {
+  .skills-wrapper {
+    padding: var(--indent-s) 35px var(--indent-s) 35px;
+    gap: var(--indent-s);
+    grid-template-columns: 1fr;
+  }
+
+  .skills-title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  .skills-list {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .skills-list_text-decorate {
+    padding-left: var(--indent-s);
+    padding-bottom: 7px; /* отступ текста от линии */
+  }
+
+  .skills-list_text-decorate::after {
+    left: 0px; /* 30px до левого края */
+    height: 1px; /* толщина 2px */
+  }
+}
